@@ -4,7 +4,9 @@ This project was generated with [Angular] and [NodeJS]
 
 ## Check Online 
 
-[Wallet Website Demo](http://mayank.frikis.xyz/git_publish/wallet_demo/){:target="_blank" rel="noopener"}
+[Wallet Website Demo](http://mayank.frikis.xyz/git_publish/wallet_demo/)
+<a href="https://www.google.com/" target="_blank">Google</a>
+
 
 ## Login Credentials
 
