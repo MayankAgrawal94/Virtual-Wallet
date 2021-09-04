@@ -1,20 +1,14 @@
-# Stock Market demo website
+# Wallet Demo website
 
 This project was generated with [Angular] and [NodeJS]
 
 ## Check Online 
 
-[Stock Market website demo](http://mayank.frikis.xyz/git_publish/demo_stock_website/)
+[Wallet Website Demo](http://mayank.frikis.xyz/git_publish/wallet_demo/)
 
 ## Login Credentials
 
-1) Share Allotment - 2 company <br />
-Email - ria@mailinator.com <br />
-Password - #321Ria
-
-2) Share Allotment - 1 company <br />
-Email - grand@mailinator.com <br />
-Password - Grand987$
+no credentails required.
 
 ## Further help
 
