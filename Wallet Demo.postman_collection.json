@@ -1,0 +1,289 @@
+{
+	"info": {
+		"_postman_id": "90503128-ca99-4431-bd58-5cece87e6316",
+		"name": "Wallet Demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Initialise wallet",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"okaaaak\",\r\n    \"balance\": 11.3543465346\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://mayank.frikis.xyz:3010/setup",
+					"protocol": "http",
+					"host": [
+						"mayank",
+						"frikis",
+						"xyz"
+					],
+					"port": "3010",
+					"path": [
+						"setup"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Initialise wallet",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"pppppp\",\r\n    \"balance\": 11\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:31000/setup",
+							"host": [
+								"localhost"
+							],
+							"port": "31000",
+							"path": [
+								"setup"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Origin, X-Requested-With, Content-Type, Accept, Key, Authorization"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "POST, GET, OPTIONS, PUT, DELETE, PATCH"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "139"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"8b-JpE6sbneEmsOSh71gOgXB15UUWo\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 01 Sep 2021 11:22:43 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"612f6282f7966915d428c9d5\",\n    \"balance\": 11,\n    \"transactionId\": \"612f6282f7966915d428c9d6\",\n    \"name\": \"pppppp\",\n    \"date\": \"2021-09-01T11:22:42.617Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Credit/Debit amount",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"amount\": 1,\r\n    \"description\" : \"let's test this\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://mayank.frikis.xyz:3010/transact/612fa7127753bc43b0b3f152",
+					"protocol": "http",
+					"host": [
+						"mayank",
+						"frikis",
+						"xyz"
+					],
+					"port": "3010",
+					"path": [
+						"transact",
+						"612fa7127753bc43b0b3f152"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Credit/Debit amount",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"amount\": 1,\r\n    \"description\" : \"let's test this\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:31000/transact/612fa7127753bc43b0b3f152",
+							"host": [
+								"localhost"
+							],
+							"port": "31000",
+							"path": [
+								"transact",
+								"612fa7127753bc43b0b3f152"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Origin, X-Requested-With, Content-Type, Accept, Key, Authorization"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "POST, GET, OPTIONS, PUT, DELETE, PATCH"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "62"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"3e-G7XkZHCHd4Yujj5y9XQb2/6AEKE\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 01 Sep 2021 18:12:19 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"balance\": 24.1543,\n    \"transactionId\": \"612fc283c52a6c30444bf7bf\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Fetch transactions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://mayank.frikis.xyz:3010/transactions?walletId=612fa7127753bc43b0b3f152&skip=0&limit=3",
+					"protocol": "http",
+					"host": [
+						"mayank",
+						"frikis",
+						"xyz"
+					],
+					"port": "3010",
+					"path": [
+						"transactions"
+					],
+					"query": [
+						{
+							"key": "walletId",
+							"value": "612fa7127753bc43b0b3f152"
+						},
+						{
+							"key": "skip",
+							"value": "0"
+						},
+						{
+							"key": "limit",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get wallet",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://mayank.frikis.xyz:3010/wallet/612fa7127753bc43b0b3f152",
+					"protocol": "http",
+					"host": [
+						"mayank",
+						"frikis",
+						"xyz"
+					],
+					"port": "3010",
+					"path": [
+						"wallet",
+						"612fa7127753bc43b0b3f152"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Total Transaction count",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://mayank.frikis.xyz:3010/transactionsCount",
+					"protocol": "http",
+					"host": [
+						"mayank",
+						"frikis",
+						"xyz"
+					],
+					"port": "3010",
+					"path": [
+						"transactionsCount"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
