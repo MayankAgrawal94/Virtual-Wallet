@@ -158,6 +158,7 @@ exports.getTransactions = async (req, res) => {
 
 	transactionsModel.find({walletId: req.query.walletId})
 	.skip(parseInt(req.query.skip)).limit(parseInt(req.query.limit))
+    .sort( { date: 'desc'} )
 	.then(data => {
         // console.log( "data - ", data )
         res.status(200).send(data);
@@ -173,7 +174,7 @@ exports.getTransactions = async (req, res) => {
 
 exports.getTransactionsCount = (req, res) => {
 
-    transactionsModel.countDocuments()
+    transactionsModel.countDocuments({walletId: req.params.walletId})
     .then(data => {
         res.status(200).send({count: data})
     }).catch(err => {

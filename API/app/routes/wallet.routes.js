@@ -10,7 +10,7 @@ module.exports = (app) => {
     //Fetch transactions
     app.get('/transactions', wallet.getTransactions);
 
-    app.get('/transactionsCount', wallet.getTransactionsCount);
+    app.get('/transactionsCount/:walletId', wallet.getTransactionsCount);
     
     app.get('/wallet/:id', wallet.getWallet);
 }
