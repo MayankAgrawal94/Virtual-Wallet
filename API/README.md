@@ -1,6 +1,6 @@
 # 'Wallet Demo' demo API
 
-This project was generated with [Node.JS](https://nodejs.org/en) version 10.16.3.
+This project was generated with [Node.JS](https://nodejs.org/en) version 10.16.3 & [MongoDB Atlas](https://www.mongodb.com/cloud/atlas).
 
 ## POSTMAN API COLLECTION
 https://www.getpostman.com/collections/cd669e7277331972cbdf
