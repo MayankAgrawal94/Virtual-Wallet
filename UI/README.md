@@ -1,10 +1,10 @@
-# Stock Market demo website
+# Wallet Demo website
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.1.
 
 ## Check Online 
 
-[Stock Market website demo](http://mayank.frikis.xyz/demo_stock_website/)
+[Wallet Website Demo](http://mayank.frikis.xyz/git_publish/wallet_demo/)
 
 ## Development server
 
