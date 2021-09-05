@@ -1,0 +1,88 @@
+<div class="cstm-about-dis">
+    <h3 style="text-align: center;">{{ formType == 'add' ? 'Create your wallet' : 'Wallet( '+walletData['name']+' ) : '}} {{formType == 'transation' ? (walletData['balance'] > -1) ? ( '₹'+ walletData['balance'] ) : ('-₹'+ (-1*walletData['balance']) ) : ''}}</h3>
+
+    <form [formGroup]="CstmForm" style="margin-top: 28px;" *ngIf="formType == 'add'">
+      <div class="row">
+         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+
+            <div class="form-group row">
+               <label for="username" class="col-md-4 col-form-label">User Name<span style="color: darkred">*</span></label>
+               <div class="col-md-8 form-err">
+                  <input type="text" formControlName="name" id=""
+                     class="form-control" name="">
+                  <span style="color: red" 
+                     *ngIf="!CstmForm.controls['name'].valid && ( CstmForm.controls['name'].touched)">
+                     Please enter User Name.
+                  </span>
+               </div>
+            </div>
+
+         </div>
+         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+
+            <div class="form-group row">
+               <label for="balance" class="col-md-4 col-form-label">Balance</label>
+               <div class="col-md-8 form-err">
+                  <input type="number" formControlName="balance" id="balance"
+                     class="form-control" name="">
+               </div>
+            </div>
+
+         </div>
+        
+      </div>
+
+      <div style="text-align: center; margin-top: 15px;margin-bottom: 15px;">
+        <button  type="button" class="btn btn-success" [disabled]="!CstmForm.valid" (click)="onSubmit()" style="margin: 0 30px;" *ngIf="formType == 'add'">Create</button>
+        <button type="button" class="btn btn-danger" (click)="onCancel()">Cancel</button>
+      </div>
+
+    </form>
+
+    <div  *ngIf="formType == 'transation'">    
+      <h4 style="margin-top:55px;">Perform Transactions :</h4>
+      <form [formGroup]="CstmForm2" style="margin-top: 28px;" *ngIf="formType == 'transation'">
+        <div class="row">
+           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
+
+              <div class="form-group row">
+                 <label for="amount" class="col-md-4 col-form-label">Amount<span style="color: darkred">*</span></label>
+                 <div class="col-md-8 form-err">
+                    <input type="number" formControlName="amount" id="amount"
+                       class="form-control" name="">
+                    <span style="color: red" 
+                       *ngIf="!CstmForm2.controls['amount'].valid && ( CstmForm2.controls['amount'].touched)">
+                       Please enter amount.
+                    </span>
+                 </div>
+              </div>
+
+           </div>
+
+           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4" style="text-align:center;">
+              <mat-slide-toggle  formControlName="type" >{{!CstmForm2.value.type ? 'Credit' : 'Debit'}}</mat-slide-toggle>
+           </div>
+
+           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4" style="margin-top: -3px">
+
+              <div class="form-group row">
+                 <label for="balance" class="col-md-4 col-form-label">Description</label>
+                 <div class="col-md-8 form-err">
+                    <input type="text" formControlName="description" id="description"
+                       class="form-control" name="">
+                 </div>
+              </div>
+
+           </div>
+          
+        </div>
+
+        <div style="text-align: center; margin-top: 15px;margin-bottom: 15px;">
+          <button  type="button" class="btn btn-success" [disabled]="!CstmForm2.valid" (click)="onCreateTrans(CstmForm2.value)" style="margin: 0 30px;" *ngIf="formType == 'transation'">Create</button>
+          <button type="button" class="btn btn-danger" (click)="onCancel()">Cancel</button>
+        </div>
+
+      </form>
+    </div>
+
+</div>

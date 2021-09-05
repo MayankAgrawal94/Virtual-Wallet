@@ -1,0 +1,48 @@
+<div class="cst-service">
+	<span>
+		<h3>My Transactions</h3>
+		<button class="btn btn-success" (click)="downloadCSV()"> Export CSV </button>
+	</span>
+    <div class="">	
+		<div class="mat-elevation-z8" style="margin-top: 25px; ">
+		  <table mat-table [dataSource]="dataSource" matSort>
+
+		    <ng-container matColumnDef="amount">
+		      <th mat-header-cell *matHeaderCellDef mat-sort-header> Amount </th>
+		      <td mat-cell *matCellDef="let row"> {{row.amount}} </td>
+		    </ng-container>
+
+		    <ng-container matColumnDef="type">
+		      <th mat-header-cell *matHeaderCellDef > Type </th>
+		      <td mat-cell *matCellDef="let row" [style.color]="row.type == 'CREDIT' ? 'green' : 'red'"> {{row.type}} </td>
+		    </ng-container>
+
+		    <ng-container matColumnDef="balance">
+		      <th mat-header-cell *matHeaderCellDef > Balance </th>
+		      <td mat-cell *matCellDef="let row" [style.color]="row.color"> ₹ {{ row.balance }} </td>
+		    </ng-container>
+
+		    <ng-container matColumnDef="description">
+		      <th mat-header-cell *matHeaderCellDef > Description </th>
+		      <td mat-cell *matCellDef="let row"> {{ row!.description || 'N/A' }} </td>
+		    </ng-container>
+
+		    <ng-container matColumnDef="date">
+		      <th mat-header-cell *matHeaderCellDef  mat-sort-header> Date </th>
+		      <td mat-cell *matCellDef="let row" > {{ ( row.date | date: 'dd/MM/yyyy hh:mm a' ) }}</td>
+		    </ng-container>
+
+		    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+		    <tr mat-row *matRowDef="let row; columns: displayedColumns;">
+		    </tr>
+		  </table>
+
+			<mat-paginator
+			    [pageSizeOptions]="pageSizeOptions"
+			    [pageSize]="Size"
+			    (page)="pageEvent = pageNavigations($event)"
+			    [length]="recordCount">
+			</mat-paginator>
+		</div>
+    </div>
+</div>
