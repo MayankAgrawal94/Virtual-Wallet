@@ -4,8 +4,8 @@ This project was generated with "Angular" for Client side development and "NodeJ
 
 ## Description
 Create new virtual wallet, 
-Allow to credit & debit money freom the wallet,
-A Transactions dashboard where log the logs can be checked for credit & debits
+Allow to credit & debit money from the wallet,
+A Transactions dashboard where all the logs can be checked for credit & debits,
 Transaction history can be exported in .csv file.
 
 ## Check Online 
