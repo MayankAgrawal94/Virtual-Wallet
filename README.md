@@ -1,10 +1,15 @@
-# Wallet Demo website
+# Virtual Wallet
 
-This project was generated with [Angular] and [NodeJS]
+This project was generated with "Angular" for Client side development and "NodeJS" for REST API
+
+## Description
+Create new virtual wallet, 
+Allow to credit & debit money freom the wallet,
+A Transactions dashboard where log the logs can be checked for credit & debits
+Transaction history can be exported in .csv file.
 
 ## Check Online 
-
-[Wallet Website Demo](http://mayankagrawal.co.in/git_publish/wallet_demo/)
+[Virtual Wallet Demo](http://mayankagrawal.co.in/git_publish/wallet_demo/)
 
 ## Login Credentials
 
