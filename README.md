@@ -9,7 +9,7 @@ A Transactions dashboard where all the logs can be checked for credit & debits,
 Transaction history can be exported in .csv file.
 
 ## Check Online 
-[Virtual Wallet Demo](http://mayankagrawal.co.in/git_publish/wallet_demo/)
+[Virtual Wallet Demo](http://wallet.demo.mayankagrawal.co.in/)
 
 ## Login Credentials
 
