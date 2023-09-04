@@ -1,6 +1,6 @@
 # Virtual Wallet
 
-This project was generated with "Angular" for Client side development and "NodeJS" for REST API
+This project was generated with Angular v8 for Client side development and updated to NodeJS v18.17.1 for REST API
 
 ## Description
 Create new virtual wallet, 
